@@ -1,8 +1,23 @@
-const Input = () => {
+import React from "react"
+
+interface InputProps {
+    id: string,
+    onChange: any,
+    value: string,
+    label: string,
+    type: string
+}
+
+const Input: React.FC<InputProps> = ({
+    id, onChange, value, label, type
+}) => {
     return (
         <div className="relative">
             <input 
-                id="email"
+                id={id}
+                value={value}
+                type={type}
+                onChange={onChange}
                 className="
                     block
                     rounded-md
@@ -21,7 +36,7 @@ const Input = () => {
                 placeholder=" "
             />
             <label 
-                htmlFor="email"
+                htmlFor={id}
                 className="
                     absolute 
                     text-md
@@ -40,7 +55,7 @@ const Input = () => {
                     peer-focus:-translate-y-3
                 "
             >
-                Email
+                {label}
             </label>
         </div>
         
