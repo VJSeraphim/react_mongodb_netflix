@@ -1,4 +1,5 @@
 import React, { useCallback, useState } from 'react'
+import axios from 'axios'
 import Input from "../components/Input"
 
 const Auth = () => {
@@ -11,6 +12,18 @@ const Auth = () => {
     const toggleVariant = useCallback(() => {
         setVariant((prev) => prev === 'login' ? 'register' : 'login')
     }, [])
+
+    const register = useCallback( async () => {
+        try {
+            await axios.post('/api/register',{
+                email,
+                name,
+                password
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }, [email, name, password])  
 
     return (
         <div className="relative h-full w-full bg-[url('/images/hero.jpg')] bg-no-repeat bg-fixed bg-center bg-cover">
@@ -53,6 +66,7 @@ const Auth = () => {
                             />
                         </div>
                         <button
+                            onClick={register}
                             className="bg-red-600 py-3 text-white rounded-md w-full mt-10 hover:bg-red-800 transition"
                         >
                             {variant === 'login' ? 'Login' : 'Sign Up'}
