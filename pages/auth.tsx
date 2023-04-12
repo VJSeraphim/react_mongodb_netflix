@@ -110,6 +110,7 @@ const Auth = () => {
                                     hover:opacity:80
                                     transition
                                 "
+                                onClick={() => signIn('google', { callbackUrl: '/' })}
                             >
                                 <FcGoogle size={30}/>
                             </div>
@@ -126,6 +127,7 @@ const Auth = () => {
                                     hover:opacity:80
                                     transition
                                 "
+                                onClick={() => signIn('github', { callbackUrl: '/' })}
                             >
                                 <FaGithub size={30}/>
                             </div>
