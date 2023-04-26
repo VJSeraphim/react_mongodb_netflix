@@ -40,8 +40,15 @@ const AccountMenu: React.FC<AccountMenuProps> = ({
                         alt="profile"
                     />
                     <p className="text-white text-30 group-hover/item:underline">
-
+                        UserName
                     </p>
+                </div>
+                <hr className="bg-gray-600 border-0 my-4 h-px"/>
+                <div 
+                    className="px-3 text-center text-white text-sm hover:underline"
+                    onClick={() => signOut()}
+                >
+                    Sign Out
                 </div>
             </div>
         </div>
