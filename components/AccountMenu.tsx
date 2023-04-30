@@ -17,6 +17,7 @@ const AccountMenu: React.FC<AccountMenuProps> = ({
                 absolute 
                 top-14 
                 right-0 
+                flex-col
                 py-5 
                 border-2
                 border-gray-800 flex"
@@ -39,7 +40,7 @@ const AccountMenu: React.FC<AccountMenuProps> = ({
                         src="/images/default-blue.png"
                         alt="profile"
                     />
-                    <p className="text-white text-30 group-hover/item:underline">
+                    <p className="text-white text-sm group-hover/item:underline">
                         UserName
                     </p>
                 </div>
