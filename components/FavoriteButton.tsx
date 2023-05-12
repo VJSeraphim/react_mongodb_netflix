@@ -57,6 +57,7 @@ const FavoriteButton: React.FC<FavoriteButtonProps> = ({ movieId }) => {
                 transition
                 hover:border-neutral-100
             "
+            onClick={toggleFavorites}
         >
             <Icon 
                 className="text-white"
