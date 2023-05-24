@@ -4,6 +4,7 @@ import { getSession } from 'next-auth/react'
 import Navbar from '../components/Navbar'
 import Billboard from '../components/Billboard'
 import MovieList from '../components/MovieList'
+import InfoModal from '../components/InfoModal'
 import useMovieList from '../hooks/useMovieList'
 import useFavorites from '../hooks/useFavorites'
 
@@ -32,6 +33,7 @@ export default function Home() {
 
   return (
     <>
+      <InfoModal visible onClose={() => {}}/>
       <Navbar />
       <Billboard />
       <div className="pb-40">
