@@ -80,7 +80,7 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                         >
                         </video>
                         <div 
-                            onClick={() => {}}
+                            onClick={handleClose}
                             className="
                                 cursor-pointer
                                 absolute 
@@ -125,6 +125,20 @@ const InfoModal: React.FC<InfoModalProps> = ({ visible, onClose }) => {
                                 <FavoriteButton movieId={data?.id} />
                             </div>
                         </div>
+                    </div>
+                    <div className="px-12 py-8">
+                        <p className="text-green-400 font-semibold text-lg">
+                            New
+                        </p>
+                        <p className="text-white text-lg">
+                            {data?.duration}
+                        </p>
+                        <p className="text-white text-lg">
+                            {data?.genre}
+                        </p>
+                        <p className="text-white text-lg">
+                            {data?.description}
+                        </p>
                     </div>
                 </div>
             </div>
